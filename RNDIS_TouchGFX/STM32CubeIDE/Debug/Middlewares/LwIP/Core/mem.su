@@ -1,0 +1,5 @@
+../Middlewares/LwIP/Core/mem.c:516:1:mem_init	0	static
+../Middlewares/LwIP/Core/mem.c:617:1:mem_free	20	static
+../Middlewares/LwIP/Core/mem.c:699:1:mem_trim	20	static
+../Middlewares/LwIP/Core/mem.c:831:1:mem_malloc	24	static
+../Middlewares/LwIP/Core/mem.c:999:1:mem_calloc	16	static

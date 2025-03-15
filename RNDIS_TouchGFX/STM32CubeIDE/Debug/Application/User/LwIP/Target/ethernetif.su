@@ -1,0 +1,6 @@
+../Application/User/LwIP/Target/ethernetif.c:91:14:low_level_output	16	static
+../Application/User/LwIP/Target/ethernetif.c:177:6:ethernetif_input	16	static
+../Application/User/LwIP/Target/ethernetif.c:233:7:ethernetif_init	0	static
+../Application/User/LwIP/Target/ethernetif.c:259:7:sys_now	0	static
+../Application/User/LwIP/Target/ethernetif.c:292:13:ethernetif_notify_conn_changed	0	static
+../Application/User/LwIP/Target/ethernetif.c:270:6:ethernetif_update_config	8	static
