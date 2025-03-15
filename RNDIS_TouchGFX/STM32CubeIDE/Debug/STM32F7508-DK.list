@@ -53,17 +53,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  24 .debug_aranges 00003d90  00000000  00000000  0019db58  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 25 .debug_str    0013e36d  00000000  00000000  001a18e8  2**0
+ 25 .debug_str    0013e391  00000000  00000000  001a18e8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 26 .debug_rnglists 0000418d  00000000  00000000  002dfc55  2**0
+ 26 .debug_rnglists 0000418d  00000000  00000000  002dfc79  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 27 .debug_loclists 000299fc  00000000  00000000  002e3de2  2**0
+ 27 .debug_loclists 000299fc  00000000  00000000  002e3e06  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 28 .debug_macro  000433dc  00000000  00000000  0030d7de  2**0
+ 28 .debug_macro  00043482  00000000  00000000  0030d802  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 29 .comment      000000c2  00000000  00000000  00350bba  2**0
+ 29 .comment      000000c2  00000000  00000000  00350c84  2**0
                   CONTENTS, READONLY
- 30 .debug_frame  0000b044  00000000  00000000  00350c7c  2**2
+ 30 .debug_frame  0000b044  00000000  00000000  00350d48  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4747,7 +4747,7 @@ static int8_t CDC_RNDIS_Itf_Process(USBD_HandleTypeDef *pdev)
   IP_ADDR4(&netmask, NETMASK_ADDR0, NETMASK_ADDR1, NETMASK_ADDR2, NETMASK_ADDR3);
 90001ab6:	e9cd 2305 	strd	r2, r3, [sp, #20]
   IP_ADDR4(&gw, GW_ADDR0, GW_ADDR1, GW_ADDR2, GW_ADDR3);
-90001aba:	f503 4328 	add.w	r3, r3, #43008	@ 0xa800
+90001aba:	f503 23b5 	add.w	r3, r3, #370688	@ 0x5a800
   (void)netif_add(&gnetif, &ipaddr, &netmask, &gw,
 90001abe:	aa06      	add	r2, sp, #24
   IP_ADDR4(&gw, GW_ADDR0, GW_ADDR1, GW_ADDR2, GW_ADDR3);
@@ -4822,7 +4822,7 @@ static void Netif_User_notification(struct netif *netif)
 90001b2a:	bf00      	nop
 90001b2c:	2000167c 	.word	0x2000167c
 90001b30:	20002bd0 	.word	0x20002bd0
-90001b34:	0a00a8c0 	.word	0x0a00a8c0
+90001b34:	0205a8c0 	.word	0x0205a8c0
 90001b38:	9000e72d 	.word	0x9000e72d
 90001b3c:	90000909 	.word	0x90000909
 90001b40:	90000949 	.word	0x90000949
@@ -4877,7 +4877,7 @@ void ethernetif_notify_conn_changed(struct netif *netif)
     IP_ADDR4(&netmask, NETMASK_ADDR0, NETMASK_ADDR1, NETMASK_ADDR2, NETMASK_ADDR3);
 90001b82:	e9cd 2301 	strd	r2, r3, [sp, #4]
     IP_ADDR4(&gw, GW_ADDR0, GW_ADDR1, GW_ADDR2, GW_ADDR3);
-90001b86:	f503 4328 	add.w	r3, r3, #43008	@ 0xa800
+90001b86:	f503 23b5 	add.w	r3, r3, #370688	@ 0x5a800
     netif_set_addr(netif, &ipaddr , &netmask, &gw);
 90001b8a:	aa02      	add	r2, sp, #8
     IP_ADDR4(&gw, GW_ADDR0, GW_ADDR1, GW_ADDR2, GW_ADDR3);
@@ -4911,7 +4911,7 @@ void ethernetif_notify_conn_changed(struct netif *netif)
     HAL_GPIO_WritePin(GPIOH, GPIO_PIN_2, 0);
 90001bb0:	f002 bd38 	b.w	90004624 <HAL_GPIO_WritePin>
 90001bb4:	40021c00 	.word	0x40021c00
-90001bb8:	0a00a8c0 	.word	0x0a00a8c0
+90001bb8:	0205a8c0 	.word	0x0205a8c0
 
 90001bbc <USBD_CDC_RNDIS_DeviceDescriptor>:
   * @param  length: Pointer to data length variable
